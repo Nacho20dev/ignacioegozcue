@@ -1,0 +1,541 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+
+/* FUENTES EXTERNAS */
+
+/* POPPINS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* LOBSTER */
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  height: 70px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(130, 178, 225);
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin-right: 35px;
+  justify-content: flex-end;
+  font-family: "Poppins", sans-serif;
+  color: rgb(39, 39, 114);
+  font-size: 20px;
+}
+ul li a {
+  text-decoration: none;
+}
+
+ul li a:hover {
+  color: white;
+  background-color: rgb(25, 75, 129);
+  border-radius: 27px;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.logo span {
+  font-size: 20px;
+
+  color: #333;
+
+  margin-bottom: 15px;
+}
+
+header figure img {
+  height: 70px;
+  width: 70px;
+  margin-left: 25px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+
+  position: relative;
+  align-items: baseline;
+}
+
+/* Contenedor centrado de Ancho fijo */
+.container-centrado {
+  width: 1280px; /* Ancho fijo */
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+main #principal {
+  background: url(./img/BRASIL.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 675px;
+}
+
+h1 {
+  font-size: 100px;
+  font-family: "Lobster";
+  color: rgb(17, 82, 10);
+}
+
+#principal p {
+  font-size: 32px;
+}
+
+p,
+table,
+li,
+#btnCotizar,
+form,
+label {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.divPrincipal {
+  display: flex;
+  flex-direction: column;
+  margin-left: 150px;
+  padding-top: 150px;
+}
+h2 {
+  font-size: 50px;
+  color: rgb(30, 58, 85);
+  font-family: "Lobster";
+}
+
+.containerArt,
+.containerOfertas,
+.containerContacto {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+/* SECCIÓN NUEVOS DESTINOS */
+.containerArt {
+  width: 100%;
+  height: 100%;
+  padding: 0 50px;
+  position: relative;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contenedorImgDestinos {
+  height: 250px;
+
+  width: 100%;
+}
+
+.contenedorImgDestinos img {
+  width: 380px;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* BOTÓN COTIZAR */
+
+.btn {
+  display: inline-block;
+  margin: 15px 0;
+  padding: 10px 20px;
+  background-color: rgb(196, 224, 251);
+  color: rgb(39, 39, 114);
+  border: 2px solid rgb(68, 0, 255);
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  max-width: 200px;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #357ab8;
+}
+
+article {
+  background-color: #e0e0ff;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+article img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+article h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2em;
+  color: #333;
+
+  margin: 10px;
+}
+
+article p {
+  padding: 0 15px;
+  color: #555;
+}
+
+article .btn,
+.section .btn {
+  margin-left: 25px;
+  width: auto;
+}
+
+section:nth-child(odd) h2 {
+  text-align: center;
+}
+
+/* SECCIÓN MEJORES DESTINOS */
+
+#mejoresDestinos {
+  background-color: rgb(150, 200, 245);
+}
+/* GRID */
+.grilla {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 300px);
+  grid-gap: 10px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.grilla .destino {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.grilla figure:nth-child(1) {
+  background-image: url("img/Capadoccia.jpg");
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+
+.grilla figure:nth-child(2) {
+  background-image: url("img/Mykonos.jpg");
+  grid-column: 3 / 5;
+  grid-row: 1 / 2;
+}
+
+.grilla figure:nth-child(3) {
+  background-image: url("img/Porto-de-Galinhas.jpg");
+  grid-column: 3 / 4;
+  grid-row: 2 / 4;
+}
+
+.grilla figure:nth-child(4) {
+  background-image: url("img/Madrid.jpg");
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.grilla figure:nth-child(5) {
+  background-image: url("img/Berlin.jpg");
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+.grilla figure:nth-child(6) {
+  background-image: url("img/Paris.jpg");
+  grid-column: 4 / 5;
+  grid-row: 2 / 4;
+}
+
+.grilla h3 {
+  position: absolute;
+  bottom: 80px;
+  z-index: 2;
+  left: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.grilla p {
+  margin-top: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #fff5f5;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+section:nth-child(4) {
+  display: flex;
+  flex-direction: row;
+}
+
+/* SECCIÓN OFERTAS */
+#ofertas {
+  background-color: rgb(116, 116, 241);
+}
+/* TABLE */
+tbody img {
+  width: 50px;
+}
+
+tbody td div {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+}
+
+tbody td div p {
+  margin-left: 10px;
+}
+tbody td {
+  text-align: center;
+}
+
+.divFecha {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* FORMULARIO */
+
+input {
+  display: block;
+  width: 500px;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+}
+
+.guardarTarjeta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.guardarTarjeta input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.guardarTarjeta label {
+  color: white;
+  font-size: 16px;
+}
+
+.btnExpand {
+  width: 500px;
+  height: 40px;
+  padding: 10px 20px;
+  justify-content: center;
+  border: none;
+  background-color: rgb(39, 39, 114);
+  color: rgb(255, 255, 255);
+  margin-top: 30px;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btnExpand:hover {
+  background-color: rgb(12, 154, 138);
+}
+
+.btnExpand:active {
+  background-color: rgb(12, 154, 138);
+}
+
+.btnPago {
+  border-radius: 50px;
+  height: 40px;
+  padding: 10px 20px;
+  background-color: bisque;
+  text-decoration: none;
+  color: blue;
+  border: 2px solid rgb(68, 0, 255);
+
+  margin-bottom: 15px;
+  display: inline-block;
+  margin-top: 8px;
+}
+.btnPago p {
+  font-family: "Poppins";
+}
+
+.btnPago:hover {
+  background-color: rgb(165, 172, 171);
+}
+
+input[type="text"] {
+  margin-bottom: 15px;
+  padding: 28px;
+  width: 478px;
+  border: 3px solid rgb(68, 0, 255);
+  border-radius: 7px;
+}
+
+input[type="text"]:active {
+  border: rgb(68, 0, 255);
+}
+
+/* SECCIÓN CONTACTO */
+
+#contacto {
+  background-color: rgb(120, 160, 200);
+}
+
+ul li {
+  display: flex;
+  flex-direction: column;
+}
+
+/* CONTENEDOR DE OFERTAS Y CONTACTO CON FLEX */
+
+.containerOfertas,
+.containerContacto {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px;
+  overflow: hidden;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#contacto h2 {
+  text-align: left;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.listaRedes {
+  width: 50%;
+  height: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listaRedes li {
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  background-position: left center;
+  padding: 25px;
+  margin-top: 20px;
+  font-family: "Poppins";
+}
+
+.containerContacto img {
+  margin-right: 10px;
+  margin-top: 20px;
+  height: 480px;
+  overflow: hidden;
+}
+
+.listaRedes li:nth-child(1) {
+  background-image: url("img/telephone.png");
+}
+
+.listaRedes li:nth-child(2) {
+  background-image: url("img/whatsapp.png");
+}
+
+.listaRedes li:nth-child(3) {
+  background-image: url("img/arroba.png");
+}
+
+.listaRedes li:nth-child(4) {
+  background-image: url("img/address.png");
+}
+
+.listaRedes li:nth-child(5) {
+  background-image: url("img/facebook.png");
+}
+
+.listaRedes li:nth-child(6) {
+  background-image: url("img/instagram.png");
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  background-color: rgb(196, 224, 251);
+}
+
+footer p {
+  align-items: flex-end;
+  margin-right: 40px;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+footer figure img {
+  height: 60px;
+  width: auto;
+  margin-left: 40px;
+}
+
+/* FLECHA CON ANCLA PARA IR AL TOP */
+.flecha {
+  width: 32px;
+  border-radius: 30%;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: white;
+}
